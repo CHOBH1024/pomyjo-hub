@@ -3,14 +3,14 @@
   <url><loc>https://pomyjo.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://pomyjo.com/guides/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <url><loc>https://pomyjo.com/guides/sleep-hygiene.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/burnout.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/caffeine-half-life.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/procrastination.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/meeting-cost.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/true-hourly-rate.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pomyjo.com/guides/startup-runway.html</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/sleep-hygiene</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/burnout</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/caffeine-half-life</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/procrastination</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/meeting-cost</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/true-hourly-rate</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pomyjo.com/guides/startup-runway</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
 
-  <url><loc>https://pomyjo.com/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://pomyjo.com/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://pomyjo.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://pomyjo.com/terms</loc><priority>0.3</priority></url>
 </urlset>

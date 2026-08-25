@@ -34,6 +34,8 @@ BLOCK_RE = re.compile(
 # .html 을 떼도 되는 내부 경로 (index.html 은 디렉터리로 처리)
 HREF_RE = re.compile(r'href="(/[^"#?]*?)\.html((?:[#?][^"]*)?)"')
 CANON_RE = re.compile(r'(<link rel="canonical" href="https://pomyjo\.com[^"]*?)\.html(")')
+# <script> 안 데이터에 들어 있는 내부 경로 (예: g:"/guides/burnout.html")
+JSPATH_RE = re.compile(r'(["\'])(/guides/[A-Za-z0-9\-]+)\.html\1')
 
 
 def normalize_href(m):
@@ -63,10 +65,7 @@ def process(path: pathlib.Path) -> str:
     # 2) 내부 링크 / canonical 정규화
     html = HREF_RE.sub(normalize_href, html)
     html = CANON_RE.sub(r"\1\2", html)
-    html = html.replace(
-        '<link rel="canonical" href="https://pomyjo.com/guides/"',
-        '<link rel="canonical" href="https://pomyjo.com/guides/"',
-    )
+    html = JSPATH_RE.sub(r"\1\2\1", html)
 
     if html != before:
         path.write_text(html, encoding="utf-8", newline="\n")

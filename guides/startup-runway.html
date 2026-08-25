@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>런웨이 계산과 착시 — 12개월이 8개월이 되는 이유 | POMYJO</title>
+<meta name="description" content="현금을 월 소진액으로 나눈 런웨이는 대부분 과대 추정입니다. 소진이 늘어나는 구조, 투자 유치에 걸리는 기간, 번 멀티플까지 반영해 실제로 남은 시간을 계산하는 법을 정리했습니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://pomyjo.com/guides/startup-runway.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<meta property="og:title" content="런웨이 계산과 착시 — 12개월이 8개월이 되는 이유">
+<meta property="og:description" content="소진이 월 10%씩 늘면 12개월 런웨이는 8.3개월입니다. 투자 유치 기간까지 빼면 남는 건 3개월입니다.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="/assets/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9992037844935954" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="inner">
+    <a class="brand" href="/">🧠 POMYJO</a>
+    <div class="links">
+      <a href="/guides/">가이드</a>
+      <a href="/#tools">진단·계산기</a>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">홈</a> › <a href="/guides/">가이드</a> › 런웨이</div>
+
+  <h1>런웨이 계산과 착시 — 12개월이 8개월이 되는 이유</h1>
+  <p class="lede">현금을 월 소진액으로 나눈 숫자를 믿고 있다면, 실제로 남은 시간은 그보다 훨씬 짧습니다.</p>
+
+  <div class="byline">
+    <span class="tag">일·커리어</span>
+    <span>읽는 데 약 8분</span>
+    <span>최종 수정: 2026년 8월</span>
+  </div>
+
+  <p>런웨이는 스타트업에서 가장 자주 계산되면서 가장 자주 틀리는 숫자입니다. 계산식 자체는 초등학교 나눗셈인데, <strong>세 가지 가정이 조용히 깔려 있고 그 가정이 거의 항상 틀립니다.</strong></p>
+
+  <h2>기본 계산</h2>
+
+  <div class="formula">
+런웨이(개월) = 보유 현금 ÷ 월 순소진액
+
+예) 현금 6억원, 월 순소진 5,000만원
+  = 60,000만원 ÷ 5,000만원
+  = 12개월
+  </div>
+
+  <p>여기서 먼저 짚어야 할 게 <strong>순소진(net burn)</strong>입니다. 총소진과 자주 혼동됩니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>구분</th><th>정의</th><th>용도</th></tr></thead>
+    <tbody>
+      <tr><td><strong>총소진</strong><br>gross burn</td><td>월 총 지출</td><td>비용 구조 파악</td></tr>
+      <tr><td><strong>순소진</strong><br>net burn</td><td>월 총 지출 − 월 매출</td><td><strong>런웨이 계산</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>런웨이는 반드시 <strong>순소진</strong>으로 계산합니다. 다만 매출이 불안정하다면 좋았던 달을 기준으로 잡지 말고 <strong>보수적인 값</strong>을 써야 합니다. 여기서부터 착시가 시작됩니다.</p>
+
+  <h2>착시 1 — 소진액은 고정되어 있지 않습니다</h2>
+
+  <p>기본 계산은 <strong>“앞으로도 매달 똑같이 쓴다”</strong>를 가정합니다. 성장하는 회사에서 이 가정은 거의 성립하지 않습니다. 사람을 뽑고, 마케팅을 늘리고, 인프라 비용이 따라 올라갑니다.</p>
+
+  <p>월 소진이 <strong>10%씩 증가</strong>하는 경우를 같은 조건으로 계산해보겠습니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>개월</th><th class="num">해당 월 소진</th><th class="num">누적 소진</th><th class="num">잔액</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td class="num">5,000</td><td class="num">5,000</td><td class="num">55,000</td></tr>
+      <tr><td class="num">3</td><td class="num">6,050</td><td class="num">16,550</td><td class="num">43,450</td></tr>
+      <tr><td class="num">5</td><td class="num">7,321</td><td class="num">30,526</td><td class="num">29,474</td></tr>
+      <tr><td class="num">7</td><td class="num">8,858</td><td class="num">47,436</td><td class="num">12,564</td></tr>
+      <tr><td class="num">8</td><td class="num">9,744</td><td class="num">57,180</td><td class="num">2,820</td></tr>
+      <tr><td class="num"><strong>9</strong></td><td class="num">10,718</td><td class="num">—</td><td class="num" style="color:#ec4899"><strong>소진</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.8rem;color:#64748b;padding:8px 14px">단위: 만원</p>
+  </div>
+
+  <p>12개월이라고 믿었던 런웨이가 <strong>실제로는 약 8.3개월</strong>입니다. 3.7개월이 사라졌습니다. 더 위험한 건, 이 격차가 <strong>후반부에 급격히 벌어진다</strong>는 점입니다. 6개월째까지는 계획과 큰 차이가 없어 보이다가 갑자기 몰려옵니다.</p>
+
+  <div class="box warn">
+    <h4>월 5%만 늘어도</h4>
+    <p>증가율이 완만해도 결과는 달라집니다. 월 5% 증가라면 12개월 런웨이가 약 <strong>10개월</strong>이 됩니다. “조금씩 늘어나는 정도”라고 넘기기 어려운 크기입니다.</p>
+  </div>
+
+  <h2>착시 2 — 투자 유치에는 시간이 걸립니다</h2>
+
+  <p>런웨이가 8개월 남았다는 건 <strong>8개월 동안 일할 수 있다</strong>는 뜻이 아닙니다. 그 안에 다음 자금을 확보해야 합니다.</p>
+
+  <p>투자 유치는 첫 미팅부터 실제 입금까지 통상 <strong>3~6개월</strong>이 걸립니다. 시장이 나쁘면 더 걸립니다. 이걸 빼면 실제로 남는 시간은 이렇습니다.</p>
+
+  <div class="formula">
+실질 가용 기간 = 실제 런웨이 − 투자 유치 소요 기간
+
+  8.3개월 − 5개월 = 3.3개월
+  </div>
+
+  <p>12개월이라고 생각했던 시간이 <strong>실질적으로는 3개월</strong>입니다. 그리고 이 3개월 안에 다음 라운드에서 보여줄 성과를 만들어야 합니다.</p>
+
+  <div class="box">
+    <h4>업계에서 통용되는 기준</h4>
+    <ul>
+      <li>라운드를 마칠 때 목표 런웨이: <strong>18~24개월</strong></li>
+      <li>다음 라운드 준비를 시작해야 하는 시점: 런웨이 <strong>9~12개월</strong> 남았을 때</li>
+      <li>런웨이 <strong>6개월 미만</strong>: 협상력이 급격히 떨어지는 구간. 투자자도 이 사실을 압니다.</li>
+    </ul>
+  </div>
+
+  <h2>착시 3 — 소진을 줄여도 즉시 반영되지 않습니다</h2>
+
+  <p>“위험하면 그때 줄이면 되지”라고 생각하기 쉽지만, 비용은 브레이크를 밟는 즉시 멈추지 않습니다.</p>
+
+  <ul>
+    <li><strong>인건비</strong> — 조정에는 통보 기간과 절차가 필요하고, 그 사이에도 비용은 나갑니다.</li>
+    <li><strong>계약</strong> — 사무실 임대, 연간 소프트웨어 계약은 즉시 해지되지 않습니다.</li>
+    <li><strong>마케팅</strong> — 중단하면 매출도 함께 줄어, 순소진이 기대만큼 안 내려갑니다.</li>
+  </ul>
+
+  <p>그래서 <strong>비용 조정은 필요해지기 2~3개월 전에</strong> 시작해야 효과가 납니다. 늦게 시작하면 조정 자체가 현금을 더 태웁니다.</p>
+
+  <div class="tool-cta">
+    <span class="ico">🛫</span>
+    <span class="txt">
+      <strong>런웨이 계산기</strong>
+      <span>현금, 순소진, 증가율을 넣으면 실제 소진 시점과 자금 조달 데드라인을 계산합니다.</span>
+    </span>
+    <a class="btn" href="https://runway-calculator.pomyjo.com">계산해보기</a>
+  </div>
+
+  <h2>런웨이보다 중요한 질문</h2>
+
+  <p>런웨이는 “언제 죽는가”를 말해주지만, 정작 중요한 건 <strong>“이대로 가면 살아남는가”</strong>입니다. 이걸 구분하는 표현이 <em>디폴트 얼라이브(default alive)</em>입니다.</p>
+
+  <div class="box note">
+    <h4>디폴트 얼라이브 vs 디폴트 데드</h4>
+    <p>추가 투자 없이, <strong>현재의 성장 속도와 비용 구조를 그대로 유지했을 때</strong> 현금이 떨어지기 전에 흑자에 도달하는가. 도달한다면 디폴트 얼라이브, 못 한다면 디폴트 데드입니다.</p>
+    <p>많은 창업자가 자기 회사가 어느 쪽인지 모르는 상태로 운영합니다. 그런데 이 답에 따라 <strong>투자 유치의 성격이 완전히 달라집니다.</strong> 디폴트 얼라이브라면 투자는 <strong>가속</strong>을 위한 선택이고, 디폴트 데드라면 <strong>생존</strong>을 위한 필수입니다. 협상 위치가 다릅니다.</p>
+  </div>
+
+  <h2>효율을 보는 지표: 번 멀티플</h2>
+
+  <p>같은 5,000만원을 태워도 어떤 회사는 매출을 크게 늘리고 어떤 회사는 제자리입니다. 이 차이를 보는 지표가 <em>번 멀티플(burn multiple)</em>입니다.</p>
+
+  <div class="formula">
+번 멀티플 = 순소진 ÷ 순증 연간반복매출(Net New ARR)
+
+예) 분기 순소진 3억,
+    같은 기간 ARR 증가 2억
+  = 3 ÷ 2 = 1.5배
+  </div>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>번 멀티플</th><th>해석</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1배 미만</td><td>매우 효율적</td></tr>
+      <tr><td class="num">1~1.5배</td><td>양호</td></tr>
+      <tr><td class="num">1.5~2배</td><td>보통</td></tr>
+      <tr><td class="num">2~3배</td><td>점검 필요</td></tr>
+      <tr><td class="num">3배 초과</td><td>구조적 문제 가능성</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>런웨이가 <strong>시간</strong>을 보여준다면 번 멀티플은 <strong>그 시간을 얼마나 잘 쓰고 있는지</strong>를 보여줍니다. 런웨이가 짧아도 번 멀티플이 좋으면 투자 유치가 어렵지 않고, 런웨이가 길어도 번 멀티플이 나쁘면 다음 라운드가 막힙니다.</p>
+
+  <h2>실무 체크리스트</h2>
+
+  <ul>
+    <li><strong>순소진으로 계산했는가.</strong> 총소진으로 계산하면 런웨이가 과소 추정되고, 매출을 낙관하면 과대 추정됩니다.</li>
+    <li><strong>소진 증가율을 반영했는가.</strong> 최근 3개월 추세를 그대로 연장해보세요.</li>
+    <li><strong>투자 유치 기간을 뺐는가.</strong> 최소 4개월, 보수적으로는 6개월입니다.</li>
+    <li><strong>비용 조정 리드타임을 고려했는가.</strong> 결정에서 실제 반영까지 2~3개월입니다.</li>
+    <li><strong>디폴트 얼라이브인지 아는가.</strong> 모른다면 이번 주에 계산하세요.</li>
+    <li><strong>매출 가정이 보수적인가.</strong> 최고치가 아니라 <strong>최근 3개월 평균</strong>을 쓰세요.</li>
+  </ul>
+
+  <div class="box warn">
+    <h4>가장 흔한 실패 패턴</h4>
+    <p>런웨이를 <strong>희망 시나리오로 계산</strong>하고, 그 숫자를 믿고 채용을 늘리고, 6개월 뒤에 실제 잔액을 보고 놀라는 순서입니다. 이 시점에는 이미 협상력이 없어 불리한 조건을 받아들이거나 급하게 줄여야 합니다. 런웨이는 <strong>보수적으로 계산해서 자주 갱신하는 숫자</strong>여야 합니다. 월 1회면 충분합니다.</p>
+  </div>
+
+  <h2>정리</h2>
+
+  <ul>
+    <li>런웨이는 <strong>순소진</strong>으로 계산합니다. 총소진과 혼동하지 마세요.</li>
+    <li>소진이 <strong>월 10% 증가하면 12개월 런웨이는 8.3개월</strong>이 됩니다.</li>
+    <li>투자 유치에 <strong>3~6개월</strong>이 걸립니다. 실질 가용 기간은 그만큼 짧습니다.</li>
+    <li>비용 조정은 <strong>2~3개월 전에</strong> 시작해야 반영됩니다.</li>
+    <li>런웨이보다 중요한 건 <strong>디폴트 얼라이브인지 여부</strong>입니다.</li>
+    <li><strong>번 멀티플</strong>은 태운 돈이 성장으로 이어지는지를 보여줍니다.</li>
+  </ul>
+
+  <div class="disclaimer">
+    이 글은 일반적인 재무 관리 정보를 제공하며, 특정 기업에 대한 투자 자문이나 회계·세무 자문이 아닙니다. 실제 자금 계획과 재무제표 처리는 회계사·세무사 등 전문가와 상의하시기 바랍니다.
+  </div>
+
+  <div class="sources">
+    <h4>참고</h4>
+    <ul>
+      <li>Paul Graham — “Default Alive or Default Dead?” (2015)</li>
+      <li>David Sacks — Burn Multiple 지표 정의</li>
+      <li>스타트업 자금 조달 소요 기간 및 목표 런웨이에 관한 벤처 업계 통용 기준</li>
+    </ul>
+  </div>
+
+  <div class="related">
+    <h3>이어서 읽기</h3>
+    <div class="related-grid">
+      <a href="/guides/meeting-cost.html"><strong>이 회의, 얼마짜리인가</strong><span>회의 비용을 숫자로 환산하는 법</span></a>
+      <a href="/guides/true-hourly-rate.html"><strong>내 진짜 시급 계산하기</strong><span>연봉을 근무시간으로 나누면 안 되는 이유</span></a>
+    </div>
+  </div>
+
+</article>
+
+<footer class="site">
+  <div class="container">
+    <p>© 2026 <a href="https://pomyjo.com">POMYJO</a> · 모든 콘텐츠와 도구는 무료입니다</p>
+    <p class="fl"><a href="/guides/">가이드</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

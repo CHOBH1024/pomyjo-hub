@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디지털 디톡스가 실패하는 이유 — 사용 시간보다 중요한 것 | POMYJO</title>
+<meta name="description" content="스마트폰 사용 시간을 줄이는 시도는 대부분 며칠 만에 무너집니다. 문제는 총량이 아니라 확인 빈도와 맥락입니다. 마찰 설계로 접근하는 실전 방법을 정리했습니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://pomyjo.com/guides/digital-detox">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<meta property="og:title" content="디지털 디톡스가 실패하는 이유 — 사용 시간보다 중요한 것">
+<meta property="og:description" content="총량을 줄이려는 시도는 대부분 실패합니다. 확인 빈도부터 봅니다.">
+<meta property="og:type" content="article">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9992037844935954" crossorigin="anonymous"></script>
+<!-- build:css -->
+<style>
+/* POMYJO — shared stylesheet */
+:root{
+  --bg:#0a0e1a; --card:#111827; --card2:#0f172a; --border:#1e293b;
+  --text:#e2e8f0; --muted:#94a3b8; --dim:#64748b;
+  --accent:#6366f1; --accent2:#8b5cf6;
+  --grad:linear-gradient(135deg,#6366f1,#8b5cf6);
+  --pink:#ec4899; --green:#10b981; --yellow:#f59e0b;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+a{color:var(--accent2)}
+
+/* ---------- 상단 내비 ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,14,26,.85);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav .inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:20px;
+}
+.nav .brand{
+  font-weight:800;font-size:1.05rem;letter-spacing:-.02em;
+  text-decoration:none;color:var(--text);display:flex;align-items:center;gap:7px;
+}
+.nav .links{display:flex;gap:18px;margin-left:auto;font-size:.9rem}
+.nav .links a{color:var(--muted);text-decoration:none;font-weight:600;transition:.2s}
+.nav .links a:hover,.nav .links a[aria-current="page"]{color:var(--text)}
+
+/* ---------- 아티클 ---------- */
+.article{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+.crumb{font-size:.85rem;color:var(--dim);margin-bottom:18px}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--text)}
+.article h1{
+  font-size:clamp(1.75rem,4.2vw,2.5rem);font-weight:800;
+  letter-spacing:-.03em;line-height:1.28;margin-bottom:14px;text-wrap:balance;
+}
+.lede{font-size:1.1rem;color:var(--muted);margin-bottom:24px}
+.byline{
+  display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+  font-size:.82rem;color:var(--dim);
+  padding-bottom:24px;margin-bottom:36px;border-bottom:1px solid var(--border);
+}
+.byline .tag{
+  background:rgba(99,102,241,.15);color:var(--accent2);
+  padding:3px 11px;border-radius:999px;font-weight:600;
+}
+.article h2{
+  font-size:1.4rem;font-weight:700;letter-spacing:-.02em;
+  margin:44px 0 14px;padding-top:8px;
+}
+.article h3{font-size:1.1rem;font-weight:700;margin:28px 0 10px;color:#cbd5e1}
+.article p{margin-bottom:18px}
+.article ul,.article ol{margin:0 0 20px;padding-left:22px}
+.article li{margin-bottom:9px}
+.article strong{color:#fff;font-weight:700}
+.article em{color:#c4b5fd;font-style:normal;font-weight:600}
+
+/* 표 */
+.tbl-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--border);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.92rem}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--card2);font-weight:700;color:#cbd5e1;font-size:.85rem}
+tbody tr:last-child td{border-bottom:none}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* 강조 박스 */
+.box{
+  background:var(--card);border:1px solid var(--border);
+  border-left:3px solid var(--accent);
+  border-radius:10px;padding:18px 20px;margin:0 0 24px;
+}
+.box.warn{border-left-color:var(--yellow)}
+.box.note{border-left-color:var(--green)}
+.box h4{font-size:.95rem;font-weight:700;margin-bottom:8px;color:#fff}
+.box p:last-child{margin-bottom:0}
+.box ul{margin-bottom:0}
+
+/* 수식 */
+.formula{
+  background:var(--card2);border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;margin:0 0 24px;
+  font-family:'Consolas','Menlo',monospace;font-size:.92rem;
+  color:#c4b5fd;overflow-x:auto;line-height:1.9;
+}
+
+/* 도구 연결 CTA */
+.tool-cta{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.12));
+  border:1px solid rgba(99,102,241,.3);border-radius:14px;
+  padding:20px 22px;margin:32px 0;
+}
+.tool-cta .ico{font-size:2rem;line-height:1}
+.tool-cta .txt{flex:1;min-width:200px}
+.tool-cta .txt strong{display:block;font-size:1.02rem;margin-bottom:3px}
+.tool-cta .txt span{color:var(--muted);font-size:.88rem}
+.tool-cta a.btn{
+  background:var(--grad);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;
+  padding:11px 22px;border-radius:10px;white-space:nowrap;transition:.2s;
+}
+.tool-cta a.btn:hover{opacity:.88;transform:translateY(-1px)}
+
+/* 각주 / 출처 */
+.sources{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);
+}
+.sources h4{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;font-weight:700}
+.sources li{margin-bottom:6px}
+
+.disclaimer{
+  margin-top:24px;padding:14px 16px;border-radius:10px;
+  background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);
+  font-size:.85rem;color:#fcd34d;
+}
+
+/* 관련 글 */
+.related{margin-top:52px}
+.related h3{font-size:1.05rem;margin-bottom:14px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.related-grid a{
+  display:block;background:var(--card);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;text-decoration:none;transition:.2s;
+}
+.related-grid a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-grid strong{display:block;color:var(--text);font-size:.95rem;margin-bottom:4px}
+.related-grid span{color:var(--muted);font-size:.82rem}
+
+/* ---------- 푸터 ---------- */
+footer.site{
+  background:#0d1220;border-top:1px solid var(--border);
+  padding:36px 0;text-align:center;color:var(--muted);font-size:.88rem;
+}
+footer.site a{color:var(--accent2);text-decoration:none}
+footer.site .fl{margin-top:8px}
+footer.site .fl a{margin:0 7px}
+
+@media(max-width:640px){
+  .nav .links{gap:12px;font-size:.82rem}
+  .article{padding:32px 20px 60px}
+  .tool-cta{flex-direction:column;align-items:flex-start}
+}
+</style>
+<!-- /build:css -->
+</head>
+<body>
+
+<nav class="nav">
+  <div class="inner">
+    <a class="brand" href="/">🧠 POMYJO</a>
+    <div class="links">
+      <a href="/guides/">가이드</a>
+      <a href="/#tools">진단·계산기</a>
+      <a href="/about">소개</a>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">홈</a> › <a href="/guides/">가이드</a> › 디지털</div>
+
+  <h1>디지털 디톡스가 실패하는 이유</h1>
+  <p class="lede">"하루 2시간만 쓰기"는 대부분 사흘을 못 넘깁니다. 총량을 목표로 잡는 순간 <strong>실패하도록 설계된 계획</strong>이 되기 때문입니다.</p>
+
+  <div class="byline">
+    <span class="tag">디지털</span>
+    <span>읽는 데 약 8분</span>
+    <span>최종 수정: 2026년 8월</span>
+  </div>
+
+  <p>스크린타임 알림을 보고 놀란 적이 있을 겁니다. 그래서 사용 시간을 줄이기로 합니다. 앱 타이머를 걸고, 며칠 지키다가, 어느 날 "오늘은 예외"가 되고, 그대로 원위치합니다.</p>
+
+  <p>이 패턴이 반복되는 건 의지의 문제가 아니라 <strong>목표를 잘못 잡았기 때문</strong>입니다.</p>
+
+  <h2>총 사용 시간은 잘못된 지표다</h2>
+
+  <p>같은 3시간이라도 성격이 완전히 다릅니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>패턴</th><th>총 시간</th><th>실제 영향</th></tr></thead>
+    <tbody>
+      <tr><td>저녁에 3시간 연속 시청</td><td>3시간</td><td>그 시간은 쓰였지만, 나머지 시간의 집중은 온전함</td></tr>
+      <tr><td>하루 종일 5분씩 36번</td><td>3시간</td><td><strong>하루 전체가 조각남.</strong> 깊은 작업이 한 번도 성립하지 않음</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>총량은 같지만 두 번째가 훨씬 해롭습니다. 문제는 <strong>화면을 본 시간이 아니라 하루를 몇 조각으로 쪼갰는가</strong>입니다.</p>
+
+  <p>그래서 봐야 할 지표는 사용 시간이 아니라 <strong>확인 횟수(pickup 수)</strong>입니다. 대부분의 기기가 이 숫자를 이미 알려줍니다. 시간보다 이쪽이 훨씬 정직한 지표입니다.</p>
+
+  <div class="box">
+    <h4>확인해볼 것</h4>
+    <p>스크린타임 화면에서 <strong>"집어 든 횟수"</strong>를 찾아보세요. 하루 80~150회가 드물지 않습니다. 깨어 있는 시간이 16시간이라면 <strong>7~12분에 한 번</strong>꼴입니다. 이 간격으로는 깊은 몰입이 구조적으로 불가능합니다.</p>
+  </div>
+
+  <h2>왜 계속 집어 드는가</h2>
+
+  <p>습관이 유지되는 건 보상이 있기 때문입니다. 그런데 스마트폰 확인의 보상은 <strong>일정하지 않다는 점</strong>이 핵심입니다.</p>
+
+  <p>대부분은 아무것도 없습니다. 가끔 반가운 메시지가 있습니다. 이렇게 <strong>보상이 예측 불가능하게 주어지는 구조</strong>는 행동을 매우 강하게 유지시킵니다. 슬롯머신과 같은 형태이고, 이건 심리학에서 오래 알려진 패턴입니다.</p>
+
+  <p>여기서 중요한 함의가 나옵니다. <strong>의지로 이기려는 접근은 불리합니다.</strong> 확인 충동이 올라올 때마다 참는 방식은 하루에 수십 번의 싸움을 만듭니다. 몇 번은 이기지만 전부 이길 수는 없습니다.</p>
+
+  <h2>마찰을 설계한다</h2>
+
+  <p>더 나은 접근은 <strong>충동이 올라오는 횟수 자체를 줄이는 것</strong>입니다. 그러려면 행동과 나 사이에 단계를 넣습니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>조치</th><th>추가되는 단계</th><th>체감 효과</th></tr></thead>
+    <tbody>
+      <tr><td>알림 끄기</td><td>먼저 떠올려야 함</td><td>큼 — 외부 유발이 사라짐</td></tr>
+      <tr><td>홈 화면에서 앱 제거 (검색으로만 진입)</td><td>이름을 타이핑해야 함</td><td>큼 — 무의식적 진입이 막힘</td></tr>
+      <tr><td>다른 방에 두기</td><td>일어나서 이동</td><td>매우 큼</td></tr>
+      <tr><td>로그아웃 상태 유지</td><td>매번 로그인</td><td>큼 — 특히 SNS</td></tr>
+      <tr><td>화면 흑백 전환</td><td>없음 (보상 강도만 낮춤)</td><td>중간</td></tr>
+      <tr><td>화면 아래로 뒤집어 두기</td><td>거의 없음</td><td>작음</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>표의 마지막 두 줄이 중요합니다. <strong>단계가 늘지 않는 조치는 효과가 작습니다.</strong> 뒤집어 놓기가 잘 안 듣는 이유가 여기 있습니다. 손만 뻗으면 되니까요.</p>
+
+  <div class="tool-cta">
+    <span class="ico">📵</span>
+    <span class="txt">
+      <strong>디지털 습관 자가 점검</strong>
+      <span>사용 시간이 아니라 확인 빈도와 맥락을 나눠서 봅니다.</span>
+    </span>
+    <a class="btn" href="https://digital-detox-radar.pomyjo.com">점검해보기</a>
+  </div>
+
+  <h2>맥락을 정한다 — 금지 대신 장소·시간</h2>
+
+  <p>"덜 쓰기"는 판단을 매번 새로 해야 합니다. 반면 <strong>"어디서·언제는 안 쓴다"</strong>는 한 번 정하면 끝입니다. 규칙이 단순할수록 오래갑니다.</p>
+
+  <ul>
+    <li><strong>침실</strong> — 침대에서 쓰지 않기. 수면 위생에서도 같은 원칙이 나옵니다. 알람은 별도 기기를 씁니다.</li>
+    <li><strong>식탁</strong> — 함께 먹는 자리에서는 꺼내지 않기.</li>
+    <li><strong>기상 후 첫 30분</strong> — 하루의 첫 입력을 알림함이 정하지 않게 합니다.</li>
+    <li><strong>작업 블록</strong> — 집중 시간에는 다른 방에. <a href="/guides/focus">집중력 글</a>의 전환 비용과 직결됩니다.</li>
+  </ul>
+
+  <div class="box note">
+    <h4>전부 다 하지 않기</h4>
+    <p>네 가지를 한 번에 시도하면 대개 전부 무너집니다. <strong>하나만 골라 2주</strong> 해보는 편이 낫습니다. 대부분은 "기상 후 30분"이나 "침실"에서 가장 큰 변화를 느낍니다.</p>
+  </div>
+
+  <h2>대체 행동이 없으면 돌아온다</h2>
+
+  <p>가장 흔한 실패 원인입니다. 스마트폰을 치우면 <strong>그 자리에 빈 시간이 생깁니다.</strong> 채울 것이 없으면 결국 원래 행동이 돌아옵니다.</p>
+
+  <p>특히 스마트폰이 <strong>지루함·불안·회피를 다루는 도구</strong>로 쓰이고 있었다면, 그 기능을 대신할 것이 필요합니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>원래 쓰이던 기능</th><th>대체 후보</th></tr></thead>
+    <tbody>
+      <tr><td>지루함 때우기</td><td>손이 닿는 곳에 책·악기·간단한 손작업</td></tr>
+      <tr><td>불안할 때 확인</td><td>짧은 산책, 호흡, 종이에 적기</td></tr>
+      <tr><td>일 미루기</td><td>2분짜리 첫 동작 정해두기 — <a href="/guides/procrastination">미루기 글</a> 참고</td></tr>
+      <tr><td>사람과 연결되고 싶을 때</td><td>실제 연락 한 통. 대체가 아니라 원래 목적에 더 가까움</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>완전한 차단이 답은 아니다</h2>
+
+  <p>주말 전면 차단 같은 방식은 극적이지만 지속되기 어렵고, 끝난 뒤 반동이 오는 경우가 많습니다. 무엇보다 스마트폰은 <strong>실제로 유용합니다.</strong> 지도, 결제, 연락, 기록 모두 여기에 있습니다.</p>
+
+  <p>목표는 사용을 없애는 게 아니라 <strong>내가 정한 때에 쓰는 것</strong>입니다. 하루 3시간을 쓰더라도 그게 조각나 있지 않고 내가 고른 시간이라면, 문제라고 볼 이유가 적습니다.</p>
+
+  <div class="box warn">
+    <h4>이 글의 범위를 넘는 경우</h4>
+    <p>사용을 줄이려 해도 통제가 안 되고, 그로 인해 <strong>수면·업무·관계에 실제 지장</strong>이 지속된다면 습관 설계의 문제가 아닐 수 있습니다. 이런 경우는 전문가와 상담하시는 편이 낫습니다.</p>
+  </div>
+
+  <h2>정리</h2>
+
+  <ul>
+    <li><strong>총 사용 시간이 아니라 확인 횟수</strong>를 봅니다. 하루가 몇 조각인지가 핵심입니다.</li>
+    <li>보상이 불규칙한 구조라서 <strong>의지로 이기는 방식은 불리합니다.</strong></li>
+    <li><strong>단계를 늘리는 조치</strong>만 효과가 있습니다. 뒤집어 놓기로는 부족합니다.</li>
+    <li>금지보다 <strong>장소·시간 규칙</strong>이 오래갑니다. 하나씩 2주.</li>
+    <li><strong>대체 행동</strong>을 준비하지 않으면 빈 시간이 원래 습관을 다시 부릅니다.</li>
+  </ul>
+
+  <div class="sources">
+    <h4>참고</h4>
+    <ul>
+      <li>Ferster CB, Skinner BF — 변동 비율 강화 계획(variable ratio schedule)과 행동 지속성</li>
+      <li>Ward AF et al., <i>Journal of the Association for Consumer Research</i>, 2017 — 스마트폰의 물리적 존재와 가용 인지 자원</li>
+      <li>Leroy S, 2009 — 주의 잔류물 및 작업 전환 비용</li>
+      <li>Wood W, Neal DT — 습관 형성에서 맥락 단서(context cue)의 역할</li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    이 글은 공개된 연구를 정리한 일반적인 정보이며, 의학적 진단이나 치료를 대신하지 않습니다.
+  </div>
+
+  <div class="related">
+    <h3>이어서 읽기</h3>
+    <div class="related-grid">
+      <a href="/guides/focus"><strong>집중이 안 되는 다섯 가지 이유</strong><span>전환 비용과 환경 설계</span></a>
+      <a href="/guides/sleep-hygiene"><strong>수면 위생 8가지 원칙</strong><span>침실 규칙이 나오는 이유</span></a>
+    </div>
+  </div>
+
+</article>
+
+<footer class="site">
+  <div class="container">
+    <p>© 2026 <a href="https://pomyjo.com">POMYJO</a> · 모든 콘텐츠와 도구는 무료입니다</p>
+    <p class="fl"><a href="/guides/">가이드</a>·<a href="/about">소개</a>·<a href="/contact">문의</a>·<a href="/privacy">개인정보처리방침</a>·<a href="/terms">이용약관</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

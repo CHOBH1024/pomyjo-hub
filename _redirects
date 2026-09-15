@@ -6,3 +6,12 @@
 /tools/meeting-cost/ https://meeting-cost-clock.pomyjo.com 301
 /tools/sleep-debt https://sleep-debt.pomyjo.com/ 301
 /tools/sleep-debt/ https://sleep-debt.pomyjo.com/ 301
+
+# Research soft-404 duplicates that were serving homepage + AdSense
+/method /404.html 404
+/method/ /404.html 404
+/data/caffeine /404.html 404
+/data/caffeine/ /404.html 404
+
+# Cloudflare Pages: unmatched paths → real 404 (no homepage clone with ads)
+/* /404.html 404

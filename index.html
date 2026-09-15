@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>POMYJO — 근거 있는 가이드와 무료 자가진단·계산기</title>
-<meta name="description" content="수면·번아웃·미루기·회의 비용·시급·런웨이. 작동 원리와 계산법을 정리한 가이드와, 직접 해볼 수 있는 무료 자가진단·계산기 26종을 모았습니다.">
+<meta name="description" content="수면·번아웃·미루기·회의 비용·시급·런웨이. 작동 원리와 계산법을 정리한 가이드와, 직접 해볼 수 있는 무료 자가진단·계산기 9종을 모았습니다.">
 <meta name="keywords" content="무료 자가진단, 수면 위생, 번아웃 진단, 카페인 반감기, 회의 비용 계산기, 진짜 시급, 스타트업 런웨이">
 <meta name="robots" content="index,follow">
 <meta name="google-site-verification" content="Py_joEyt-Mm5t5RHCkNc7z76e5UlcWyNH4">
@@ -271,7 +271,7 @@ footer.site .fl a{margin:0 7px}
 
 <header class="hero">
   <div class="container">
-    <span class="hero-badge">가이드 15편 · 진단과 계산기 26종</span>
+    <span class="hero-badge">가이드 15편 · 진단과 계산기 9종</span>
     <h1>알고 나면 달라지는 것들</h1>
     <p class="sub">오후 커피가 밤잠에 남는 시간, 회의 하나의 실제 가격, 연봉이 아니라 시급으로 본 이직. 흔한 조언 대신 <strong>작동 원리와 계산법</strong>을 정리했습니다.</p>
     <div class="hero-cta">
@@ -427,41 +427,17 @@ const TOOLS = [
   {t:"수면 위생 진단", d:"취침 리듬·자극 관리·침실 환경 등 5개 영역을 15문항으로 점검합니다.", c:"건강·습관", e:"😴", u:"https://sleep-hygiene-radar.pomyjo.com", g:"/guides/sleep-hygiene", gt:"수면 위생 8가지 원칙"},
   {t:"카페인 반감기 계산기", d:"마신 시각과 양으로 취침 시점의 잔존량과 마감 시각을 계산합니다.", c:"건강·습관", e:"⏰", u:"https://caffeine-half-life-clock.pomyjo.com", g:"/guides/caffeine-half-life", gt:"카페인 반감기 완전 정리"},
   {t:"카페인 의존도 진단", d:"섭취량·내성·금단·수면영향·심리적 의존 5개 축을 15문항으로 진단합니다.", c:"건강·습관", e:"☕", u:"https://caffeine-dependency-radar.pomyjo.com", g:"/guides/caffeine-half-life", gt:"카페인 반감기 완전 정리"},
-  {t:"미루기 습관 진단", d:"왜 미루는지 유형을 나누고 대응 방향을 제안합니다.", c:"건강·습관", e:"⏳", u:"https://procrastination-radar.pomyjo.com", g:"/guides/procrastination", gt:"미루기는 게으름이 아니다"},
-  {t:"ADHD 포커스 진단", d:"집중력 유형을 살펴보는 자가 점검입니다. 의학적 진단이 아닙니다.", c:"건강·습관", e:"🎯", u:"https://adhd-focus-radar.pomyjo.com"},
-  {t:"생산성 도구 강박 진단", d:"정리하느라 일을 못 하는 상태인지 점검합니다.", c:"건강·습관", e:"📋", u:"https://notion-obsessive-radar.pomyjo.com"},
-  {t:"육아 성향 진단", d:"부모로서의 반응 패턴과 아이와의 상호작용을 살펴봅니다.", c:"건강·습관", e:"🧸", u:"https://aikiugihimdulda.pomyjo.com"},
-
   // ---- 일·커리어 ----
   {t:"번아웃 레이더", d:"소진·냉소·효능감 저하 중 어디가 무너졌는지 점검합니다.", c:"일·커리어", e:"🔥", u:"https://burnout-radar.pomyjo.com", g:"/guides/burnout", gt:"번아웃의 세 가지 얼굴"},
-  {t:"번아웃 예방 진단", d:"지속 가능한 업무 습관이 갖춰져 있는지 확인합니다.", c:"일·커리어", e:"🛡️", u:"https://burnout-prevention-radar.pomyjo.com", g:"/guides/burnout", gt:"번아웃의 세 가지 얼굴"},
-  {t:"번아웃 회복 진단", d:"소진 상태에서 회복 중일 때 무엇이 남았는지 점검합니다.", c:"일·커리어", e:"🌱", u:"https://burnout-recovery-radar.pomyjo.com", g:"/guides/burnout", gt:"번아웃의 세 가지 얼굴"},
-  {t:"커리어 적성 진단", d:"강점을 기준으로 직무 방향을 제안하는 심층 진단입니다.", c:"일·커리어", e:"🧭", u:"https://chotan.pomyjo.com"},
-  {t:"방어성 진단", d:"피드백을 받을 때 방어적으로 반응하는 정도를 살펴봅니다.", c:"일·커리어", e:"🪞", u:"https://defensiveness-radar.pomyjo.com"},
   {t:"몰입 대시보드", d:"엠비언트 사운드, 뽀모도로 타이머, 칸반 보드를 한 화면에서.", c:"일·커리어", e:"🎧", u:"https://FocusFlow1024.pomyjo.com"},
-  {t:"디지털 자립 역량 진단", d:"기술과 플랫폼에 대한 의존도를 점검합니다.", c:"일·커리어", e:"🔐", u:"https://digital-sovereignty-fit.pomyjo.com"},
-  {t:"IT 아키텍처 저널", d:"홈 서버 구축과 하드웨어 최적화를 다루는 기술 아카이브입니다.", c:"일·커리어", e:"🖥️", u:"https://serverguchuk1024.pomyjo.com"},
-
   // ---- 돈·계산 ----
-  {t:"별의별 계산기", d:"실생활 재무·생활 계산기 모음. 빠른 계산과 판단을 돕습니다.", c:"돈·계산", e:"🧮", u:"https://jeongbu.pomyjo.com"},
   {t:"진짜 시급 계산기", d:"통근·준비·야근·회식까지 넣어 실제 시간당 가치를 계산합니다.", c:"돈·계산", e:"⏱️", u:"https://true-hourly-rate.pomyjo.com", g:"/guides/true-hourly-rate", gt:"내 진짜 시급 계산하기"},
   {t:"회의 비용 계산기", d:"참석자와 시간을 넣으면 회의 비용이 실시간으로 올라갑니다.", c:"돈·계산", e:"💸", u:"https://meeting-cost-clock.pomyjo.com", g:"/guides/meeting-cost", gt:"이 회의, 얼마짜리인가"},
-  {t:"스타트업 런웨이 계산기", d:"현금과 소진 증가율로 실제 소진 시점과 조달 데드라인을 계산합니다.", c:"돈·계산", e:"🛫", u:"https://runway-calculator.pomyjo.com", g:"/guides/startup-runway", gt:"런웨이 계산과 착시"},
-  {t:"무료혜택 지도", d:"정부 지원금과 무료 혜택을 카테고리별로 찾아봅니다.", c:"돈·계산", e:"🎁", u:"https://free-benefit-map.pomyjo.com"},
-
-  // ---- 성격·심리 ----
-  {t:"MZ 레이더", d:"에니어그램 기반으로 업무 스타일과 강점·약점을 분석합니다.", c:"성격·심리", e:"💜", u:"https://mz-radar.pomyjo.com"},
-  {t:"머니 레이더", d:"소비 패턴과 투자 성향을 유형별로 살펴봅니다.", c:"성격·심리", e:"💳", u:"https://money-radar.pomyjo.com"},
-  {t:"크립토 FOMO 진단", d:"충동매수·군중심리·손실회피 등 투자 심리를 점검합니다.", c:"성격·심리", e:"📉", u:"https://crypto-fomo-radar.pomyjo.com"},
-
-  // ---- 생활·도구 ----
-  {t:"점심 뭐먹지", d:"인원·예산·기분으로 오늘의 메뉴를 골라줍니다.", c:"생활·도구", e:"🍱", u:"https://jikjang.pomyjo.com"},
-  {t:"인생 주간 계산기", d:"남은 인생을 주 단위로 시각화합니다.", c:"생활·도구", e:"⏳", u:"https://weeks-of-life.pomyjo.com"},
-  {t:"AI 글 스타일 감지기", d:"글을 붙여넣고 AI 스타일 점수를 확인하는 재미용 도구입니다.", c:"생활·도구", e:"🤖", u:"https://ai-style-detector.pomyjo.com"}
+  {t:"스타트업 런웨이 계산기", d:"현금과 소진 증가율로 실제 소진 시점과 조달 데드라인을 계산합니다.", c:"돈·계산", e:"🛫", u:"https://runway-calculator.pomyjo.com", g:"/guides/startup-runway", gt:"런웨이 계산과 착시"}
 ];
 
-const CAT_EMOJI = {'건강·습관':'💚','일·커리어':'💼','돈·계산':'💰','성격·심리':'💜','생활·도구':'✨'};
-const CATS = ['전체','건강·습관','일·커리어','돈·계산','성격·심리','생활·도구'];
+const CAT_EMOJI = {'건강·습관':'💚','일·커리어':'💼','돈·계산':'💰'};
+const CATS = ['전체','건강·습관','일·커리어','돈·계산'];
 
 const catWrap = document.getElementById('cats');
 const searchInput = document.getElementById('search');

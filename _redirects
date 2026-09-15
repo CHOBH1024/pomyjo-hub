@@ -1,0 +1,4 @@
+# Soft-404 fix: /tools/* historically fell through to homepage (200 + canonical /).
+# Redirect the known tool path to its subdomain app.
+/tools/true-hourly-rate https://true-hourly-rate.pomyjo.com 301
+/tools/true-hourly-rate/ https://true-hourly-rate.pomyjo.com 301

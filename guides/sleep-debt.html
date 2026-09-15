@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수면부채 계산하기 — 밀린 잠은 주말에 한 번에 못 갚습니다 | POMYJO</title>
+<meta name="description" content="하루 1시간만 덜 자도 일주일이면 7시간 빚입니다. 주말 몰아자기는 상환이 아닙니다. 수면빚 계산과 회복 순서를 짧게 정리합니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://pomyjo.com/guides/sleep-debt">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<meta property="og:title" content="하루 1시간 부족 × 7일 = 7시간 빚">
+<meta property="og:description" content="하루 1시간만 덜 자도 일주일이면 7시간 빚입니다. 주말 몰아자기는 상환이 아닙니다. 수면빚 계산과 회복 순서를 짧게 정리합니다.">
+<meta property="og:url" content="https://pomyjo.com/guides/sleep-debt">
+<meta property="og:image" content="https://pomyjo.com/guides/sleep-debt-og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="하루 1시간 부족 × 7일 = 7시간 빚">
+<meta name="twitter:description" content="하루 1시간만 덜 자도 일주일이면 7시간 빚입니다. 주말 몰아자기는 상환이 아닙니다. 수면빚 계산과 회복 순서를 짧게 정리합니다.">
+<meta name="twitter:image" content="https://pomyjo.com/guides/sleep-debt-og-1200x630.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9992037844935954" crossorigin="anonymous"></script>
+<!-- build:css -->
+<style>
+/* POMYJO — shared stylesheet */
+:root{
+  --bg:#0a0e1a; --card:#111827; --card2:#0f172a; --border:#1e293b;
+  --text:#e2e8f0; --muted:#94a3b8; --dim:#64748b;
+  --accent:#6366f1; --accent2:#8b5cf6;
+  --grad:linear-gradient(135deg,#6366f1,#8b5cf6);
+  --pink:#ec4899; --green:#10b981; --yellow:#f59e0b;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+a{color:var(--accent2)}
+
+/* ---------- 상단 내비 ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,14,26,.85);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav .inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:20px;
+}
+.nav .brand{
+  font-weight:800;font-size:1.05rem;letter-spacing:-.02em;
+  text-decoration:none;color:var(--text);display:flex;align-items:center;gap:7px;
+}
+.nav .links{display:flex;gap:18px;margin-left:auto;font-size:.9rem}
+.nav .links a{color:var(--muted);text-decoration:none;font-weight:600;transition:.2s}
+.nav .links a:hover,.nav .links a[aria-current="page"]{color:var(--text)}
+
+/* ---------- 아티클 ---------- */
+.article{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+.crumb{font-size:.85rem;color:var(--dim);margin-bottom:18px}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--text)}
+.article h1{
+  font-size:clamp(1.75rem,4.2vw,2.5rem);font-weight:800;
+  letter-spacing:-.03em;line-height:1.28;margin-bottom:14px;text-wrap:balance;
+}
+.lede{font-size:1.1rem;color:var(--muted);margin-bottom:24px}
+.byline{
+  display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+  font-size:.82rem;color:var(--dim);
+  padding-bottom:24px;margin-bottom:36px;border-bottom:1px solid var(--border);
+}
+.byline .tag{
+  background:rgba(99,102,241,.15);color:var(--accent2);
+  padding:3px 11px;border-radius:999px;font-weight:600;
+}
+.article h2{
+  font-size:1.4rem;font-weight:700;letter-spacing:-.02em;
+  margin:44px 0 14px;padding-top:8px;
+}
+.article h3{font-size:1.1rem;font-weight:700;margin:28px 0 10px;color:#cbd5e1}
+.article p{margin-bottom:18px}
+.article ul,.article ol{margin:0 0 20px;padding-left:22px}
+.article li{margin-bottom:9px}
+.article strong{color:#fff;font-weight:700}
+.article em{color:#c4b5fd;font-style:normal;font-weight:600}
+
+/* 표 */
+.tbl-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--border);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.92rem}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--card2);font-weight:700;color:#cbd5e1;font-size:.85rem}
+tbody tr:last-child td{border-bottom:none}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* 강조 박스 */
+.box{
+  background:var(--card);border:1px solid var(--border);
+  border-left:3px solid var(--accent);
+  border-radius:10px;padding:18px 20px;margin:0 0 24px;
+}
+.box.warn{border-left-color:var(--yellow)}
+.box.note{border-left-color:var(--green)}
+.box h4{font-size:.95rem;font-weight:700;margin-bottom:8px;color:#fff}
+.box p:last-child{margin-bottom:0}
+.box ul{margin-bottom:0}
+
+/* 수식 */
+.formula{
+  background:var(--card2);border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;margin:0 0 24px;
+  font-family:'Consolas','Menlo',monospace;font-size:.92rem;
+  color:#c4b5fd;overflow-x:auto;line-height:1.9;
+}
+
+/* 도구 연결 CTA */
+.tool-cta{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.12));
+  border:1px solid rgba(99,102,241,.3);border-radius:14px;
+  padding:20px 22px;margin:32px 0;
+}
+.tool-cta .ico{font-size:2rem;line-height:1}
+.tool-cta .txt{flex:1;min-width:200px}
+.tool-cta .txt strong{display:block;font-size:1.02rem;margin-bottom:3px}
+.tool-cta .txt span{color:var(--muted);font-size:.88rem}
+.tool-cta a.btn{
+  background:var(--grad);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;
+  padding:11px 22px;border-radius:10px;white-space:nowrap;transition:.2s;
+}
+.tool-cta a.btn:hover{opacity:.88;transform:translateY(-1px)}
+
+/* 각주 / 출처 */
+.sources{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);
+}
+.sources h4{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;font-weight:700}
+.sources li{margin-bottom:6px}
+
+.disclaimer{
+  margin-top:24px;padding:14px 16px;border-radius:10px;
+  background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);
+  font-size:.85rem;color:#fcd34d;
+}
+
+/* 관련 글 */
+.related{margin-top:52px}
+.related h3{font-size:1.05rem;margin-bottom:14px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.related-grid a{
+  display:block;background:var(--card);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;text-decoration:none;transition:.2s;
+}
+.related-grid a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-grid strong{display:block;color:var(--text);font-size:.95rem;margin-bottom:4px}
+.related-grid span{color:var(--muted);font-size:.82rem}
+
+/* ---------- 푸터 ---------- */
+footer.site{
+  background:#0d1220;border-top:1px solid var(--border);
+  padding:36px 0;text-align:center;color:var(--muted);font-size:.88rem;
+}
+footer.site a{color:var(--accent2);text-decoration:none}
+footer.site .fl{margin-top:8px}
+footer.site .fl a{margin:0 7px}
+
+@media(max-width:640px){
+  .nav .links{gap:12px;font-size:.82rem}
+  .article{padding:32px 20px 60px}
+  .tool-cta{flex-direction:column;align-items:flex-start}
+}
+</style>
+<!-- /build:css -->
+</head>
+<body>
+
+<nav class="nav">
+  <div class="inner">
+    <a class="brand" href="/">🧠 POMYJO</a>
+    <div class="links">
+      <a href="/guides/">가이드</a>
+      <a href="/#tools">진단·계산기</a>
+      <a href="/about">소개</a>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">홈</a> › <a href="/guides/">가이드</a> › 수면빚</div>
+
+  <h1>수면부채 계산하기 — 밀린 잠은 주말에 한 번에 못 갚습니다</h1>
+  <p class="lede">주중에 매일 1시간씩 덜 자면 <strong>7일 누적 7시간 빚</strong>. 주말 몰아자기는 상환이 아닙니다. 숫자를 잡아보면 왜 월요일에 더 피곤한지 보입니다.</p>
+
+  <div class="byline">
+    <span class="tag">건강·습관</span>
+    <span>읽는 데 약 4분</span>
+    <span>최종 수정: 2026년 9월 15일</span><span>개정: FAQ 3문항, 계산기 CTA, 시급·회의비 상호링크</span>
+  </div>
+
+  <p>“밀린 잠을 주말에 몰아 잔다”는 말은 직관적입니다. 그런데 몸에서 실제로 일어나는 회복은 회계장부처럼 1시간 빚을 1시간으로 상쇄하지 않습니다. 이 글에서는 수면부채를 <strong>추적용 숫자</strong>로 어떻게 잡을지, 그리고 그 숫자가 <strong>무엇을 설명하지 못하는지</strong>를 먼저 분명히 합니다.</p>
+
+  <div class="box warn">
+    <h4>진단이 아닙니다</h4>
+    <p>이 글과 계산기는 의학적 진단이 아닙니다. 3개월 이상 주 3회 넘게 잠들기·유지가 어렵다면 <a href="/guides/sleep-hygiene">수면 위생 가이드</a>에서 말했듯 전문적 평가가 우선입니다.</p>
+  </div>
+
+  <h2>수면부채란 무엇인가</h2>
+
+  <p>흔히 쓰는 단순 정의는 이렇습니다.</p>
+
+  <div class="formula">
+일일 수면부채 = max(0, 필요한 수면 − 실제 수면)
+누적 수면부채 = 최근 N일 일일 부채의 합
+  </div>
+
+  <p>예) 필요가 7.5시간인데 5일 연속 6.5시간이면 하루 1시간 × 5 = 5시간.</p>
+
+  <p>성인 일반 기준선은 하루 <strong>7시간 이상</strong>(NIH / AASM 합의)을 참고하되, 개인 최적은 그보다 길 수 있습니다. 이 식은 <strong>습관을 숫자로 보기 위한 추적기</strong>입니다. “최적 수면 시간”은 사람마다 다르고, 8시간 고정이 아닙니다. 본인이 며칠 연속 유지했을 때 낮 졸음이 덜한 쪽을 필요량 후보로 두는 편이 낫습니다.</p>
+
+  <p>연구 쪽에서는 습관적 수면(HSD)과 개인 최적 수면(OSD)의 차이로 <strong>잠재 수면부채(PSD)</strong>를 정의하기도 합니다. Kitamura 등(Scientific Reports, 2016)은 연장 수면 실험으로 OSD를 추정한 뒤 PSD = OSD − HSD로 보았습니다. 소규모 실험이지만, “몇 시간 잤는가”만으로는 졸음을 설명하기 어렵고 <strong>개인 필요량 대비 부족분</strong>이 중요하다는 방향은 일관됩니다.</p>
+
+  <h2>왜 주말 몰아자기가 회계처럼 안 되나</h2>
+
+  <ol>
+    <li><strong>회복 속도가 부채 속도와 다름</strong><br>
+      같은 연구 맥락에서, 잠재 부채 약 1시간을 되돌리는 데 며칠이 걸릴 수 있다고 보고됩니다. “5시간 밀렸으니 토요일 5시간 더”가 성립하지 않습니다.</li>
+    <li><strong>기능 저하가 누적됨</strong><br>
+      Van Dongen 등(Sleep, 2003)은 만성적으로 수면을 제한하면 수행 저하가 누적된다는 점을 보였습니다. (<a href="/guides/sleep-hygiene">수면 위생 가이드</a> 참고에도 동일 문헌이 있습니다.) 주말 한두 번의 긴 수면으로 주중 저하가 깔끔히 리셋된다고 보기 어렵습니다.</li>
+    <li><strong>사회적 시차</strong><br>
+      주말 기상만 크게 늦추면 리듬이 밀립니다. 수면 위생 가이드의 “기상 고정”과 충돌합니다. 부채를 줄이려다 월요 리듬을 더 망가뜨릴 수 있습니다.</li>
+  </ol>
+
+  <h2>계산기에 넣는 값</h2>
+
+  <p><a href="https://sleep-debt.pomyjo.com">수면빚 계산기</a>에 아래를 넣습니다.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>입력</th><th>의미</th><th>주의</th></tr></thead>
+    <tbody>
+      <tr><td>필요 수면(시간)</td><td>본인이 “개운한” 목표. 기본 제안 7.0~9.0 범위에서 선택</td><td>기본값 8을 진리로 쓰지 않음</td></tr>
+      <tr><td>최근 7일 실제 수면</td><td>잠든 시간 (침대에 누운 시간 아님)</td><td>수면 효율과는 별개</td></tr>
+      <tr><td>(선택) 주말 잉여 차감</td><td>장부 잔액 참고용</td><td>기본 OFF. 실제 회복 ≠ 장부</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>출력:</p>
+  <ul>
+    <li>7일 누적 부채(시간)</li>
+    <li>일평균 부족분</li>
+    <li>부채가 난 날 수</li>
+    <li>(옵션) “주말 잉여를 뺀 장부 잔액” — UI에 고정 경고 문구</li>
+    <li>누적이 크면: 기상 고정·<a href="/guides/caffeine-half-life">카페인 마감</a>부터 보라는 팁</li>
+  </ul>
+
+  <div class="tool-cta" data-tool="sleep-debt">
+    <span class="ico">😴</span>
+    <span class="txt">
+      <strong>내 수면빚 바로 보기</strong>
+      <span>최근 며칠 수면만 넣으면 누적 빚이 나옵니다. (진단 아님)</span>
+    </span>
+    <a class="btn" href="https://sleep-debt.pomyjo.com">수면빚 계산기</a>
+  </div>
+
+  <h2>예시 (가정)</h2>
+
+  <p>필요 7.5시간.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>요일</th><th>실제</th><th>일일 부채</th></tr></thead>
+    <tbody>
+      <tr><td>월~금</td><td class="num">6.5</td><td class="num">1.0 × 5 = 5.0</td></tr>
+      <tr><td>토</td><td class="num">9.5</td><td class="num">0 (잉여 2.0은 “상환”으로 단정하지 않고 별도 표시)</td></tr>
+      <tr><td>일</td><td class="num">9.0</td><td class="num">0 (잉여 1.5)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>단순 합산 부채는 주중 5.0시간입니다. 주말 잉여 3.5시간을 장부처럼 빼면 1.5가 남지만, <strong>이 뺄셈은 추적 편의일 뿐 생리학적 청산 증명이 아닙니다.</strong> 계산기 UI에서도 같은 경고를 띄웁니다.</p>
+
+  <h2>부채를 줄이는 쪽의 우선순위</h2>
+
+  <p>수면 위생 가이드의 순서와 맞춥니다. <a href="/guides/chronotype">크로노타입</a>이 저녁형이어도 “기상만 마음대로 미루기”와는 별개로, 주중·주말 기상 격차를 줄이는 쪽이 부채 숫자보다 먼저인 경우가 많습니다.</p>
+
+  <ol>
+    <li>기상 시각 고정 + 아침 빛</li>
+    <li>카페인 마감 시각 (<a href="/guides/caffeine-half-life">반감기 가이드</a>로 계산)</li>
+    <li>주중 취침을 15~30분씩만 앞당기기 (한 번에 2시간 일찍 눕기보다)</li>
+    <li>주말 보충은 <strong>기상 지연 1시간 이내</strong>로 제한하는 쪽을 기본 권고</li>
+    <li>만성 불면 의심 시 계산기 대신 평가</li>
+  </ol>
+
+  <p>개인·조직의 “시간당 단가”는 <a href="/guides/true-hourly-rate">진짜 시급</a>·<a href="/guides/meeting-cost">회의 비용</a>과 같은 숫자로 보기 습관입니다. 잠도 시간과 회복으로 재는 같은 논리입니다.</p>
+
+  <div class="tool-cta" data-tool="sleep-debt">
+    <span class="ico">😴</span>
+    <span class="txt">
+      <strong>내 수면빚 바로 보기</strong>
+      <span>최근 며칠 수면만 넣으면 누적 빚이 나옵니다. (진단 아님)</span>
+    </span>
+    <a class="btn" href="https://sleep-debt.pomyjo.com">수면빚 계산기</a>
+  </div>
+
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">자주 묻는 질문</h2>
+
+    <h3>얼마나 자야 하나요?</h3>
+    <p>성인은 보통 하루 7시간 이상(NIH·AASM)을 기준으로 보되, 개인 최적은 그보다 길 수 있습니다. 며칠 연속 개운한 쪽을 필요량 후보로 두세요.</p>
+
+    <h3>주말에 몰아 자면 갚아지나요?</h3>
+    <p>회계처럼 1:1로 청산되지 않습니다. 기상만 크게 밀리면 일주기만 흔들립니다. 기상 고정이 우선이고, 취침은 15~30분씩만 앞당기세요.</p>
+
+    <h3>계산기 숫자는 진단인가요?</h3>
+    <p>아닙니다. 습관 패턴을 보기 위한 참고값입니다. 만성 불면 의심이면 전문 평가가 우선입니다.</p>
+  </section>
+
+  <h2>정리</h2>
+
+  <ul>
+    <li>수면부채 추적식은 max(0, 필요 − 실제)의 합이다.</li>
+    <li>필요량은 개인차이며 8시간 고정이 아니다. 성인 기준선은 <strong>≥7시간/일</strong>.</li>
+    <li>주말 몰아자기는 회계상 잔액과 실제 회복을 같게 보지 않는다.</li>
+    <li>리듬(기상)과 카페인 시각이 부채 숫자보다 먼저인 경우가 많다.</li>
+    <li>진단이 아니다.</li>
+  </ul>
+
+  <div class="disclaimer">
+    이 글과 계산기는 의학적 진단·치료가 아닙니다. 만성 불면이 의심되면 전문 평가를 우선하세요.
+  </div>
+
+  <div class="sources">
+    <h4>참고</h4>
+    <ul>
+      <li>Kitamura et al. “Estimating individual optimal sleep duration and potential sleep debt.” Scientific Reports, 2016. <a href="https://www.nature.com/articles/srep35812" rel="noopener">nature.com</a> — OSD/PSD 개념, 소표본.</li>
+      <li>Van Dongen HPA et al. “The Cumulative Cost of Additional Wakefulness.” Sleep, 2003;26(2):117–126. doi:10.1093/sleep/26.2.117 — 만성 제한과 수행 누적.</li>
+      <li>NHLBI/NIH — How much sleep is enough? <a href="https://www.nhlbi.nih.gov/health/sleep/how-much-sleep" rel="noopener">nhlbi.nih.gov</a> — 성인 권장 수면.</li>
+      <li>Watson NF et al. / AASM·SRS consensus. Sleep. 2015. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4434546/" rel="noopener">PMC</a> — 성인 ≥7시간 권고.</li>
+      <li>확인하지 못한 것 — “밀린 잠 1시간을 갚는 데 정확히 N일”을 모든 사람에게 일반화하는 단일 계수는 없음. 계산기의 주말 상환 숫자는 <strong>장부용 참고</strong>로만 표시.</li>
+      <li>개정 2026-09-15: FAQ 3문항, 계산기 CTA(sleep-debt.pomyjo.com), 시급·회의비 상호링크, 공유 훅(7시간 빚 / 몰아자기≠상환).</li>
+    </ul>
+  </div>
+
+  <div class="related">
+    <h3>이어서 읽기</h3>
+    <div class="related-grid">
+      <a href="/guides/sleep-hygiene"><strong>수면 위생 8가지 원칙</strong><span>잠의 질을 바꾸는 영향력 순서</span></a>
+      <a href="/guides/caffeine-half-life"><strong>카페인 반감기 완전 정리</strong><span>오후 커피와 마감 시각</span></a>
+      <a href="/guides/chronotype"><strong>크로노타입과 사회적 시차</strong><span>기상 격차가 만드는 비용</span></a>
+      <a href="/guides/true-hourly-rate"><strong>내 진짜 시급 계산하기</strong><span>시간을 숫자로 보는 습관</span></a>
+      <a href="/guides/meeting-cost"><strong>이 회의, 얼마짜리인가</strong><span>조직 쪽 시간 단가</span></a>
+    </div>
+  </div>
+
+</article>
+
+<footer class="site">
+  <div class="container">
+    <p>© 2026 <a href="https://pomyjo.com">POMYJO</a> · 모든 콘텐츠와 도구는 무료입니다</p>
+    <p class="fl"><a href="/guides/">가이드</a>·<a href="/about">소개</a>·<a href="/contact">문의</a>·<a href="/privacy">개인정보처리방침</a>·<a href="/terms">이용약관</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>이 회의, 얼마짜리인가 — 회의 비용을 숫자로 환산하는 법 | POMYJO</title>
-<meta name="description" content="연봉만으로 회의 비용을 계산하면 실제의 60%도 안 나옵니다. 사업주 부담분을 포함한 실질 인건비 계산법, 주간 정례회의의 연간 비용, 그리고 회의보다 비싼 집중력 파편화 비용까지 정리했습니다.">
+<meta name="description" content="연봉 5천만 직원 8명의 1시간 회의는 약 25만 원. 주간 정례면 연 천만 단위입니다. 인건비 로딩과 맥락 전환까지 넣는 계산법.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://pomyjo.com/guides/meeting-cost">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
@@ -192,7 +192,7 @@ footer.site .fl a{margin:0 7px}
   <div class="byline">
     <span class="tag">일·커리어</span>
     <span>읽는 데 약 7분</span>
-    <span>최종 수정: 2026년 8월</span>
+    <span>최종 수정: 2026년 9월 15일</span><span>개정: FAQ(÷2080·연간 누적·숨은 비용), 진짜 시급 상호링크, 계산기 CTA</span>
   </div>
 
   <p>회의가 많다는 불만은 어느 조직에나 있습니다. 그런데 이 불만이 좀처럼 개선으로 이어지지 않는 이유는, <strong>회의가 예산에 잡히지 않기 때문</strong>입니다. 비용이 보이지 않으면 줄일 근거도 생기지 않습니다.</p>
@@ -264,13 +264,13 @@ footer.site .fl a{margin:0 7px}
 
   <p>주간 정례회의 하나가 <strong>신입 직원 한 명의 연봉</strong>에 해당합니다. 그런데 이 회의를 없애자는 제안에는 근거를 요구받고, 회의를 하나 더 만들자는 제안에는 아무도 비용을 묻지 않습니다.</p>
 
-  <div class="tool-cta">
+  <div class="tool-cta" data-tool="meeting-cost-clock">
     <span class="ico">💸</span>
     <span class="txt">
-      <strong>회의 비용 계산기</strong>
-      <span>참석자 수와 연봉 수준을 넣으면 실시간으로 비용이 올라가는 걸 볼 수 있습니다.</span>
+      <strong>이 회의, 얼마인지 바로 보기</strong>
+      <span>인원·연봉·시간만 넣으면 1회·연간이 같이 나옵니다.</span>
     </span>
-    <a class="btn" href="https://meeting-cost-clock.pomyjo.com">계산해보기</a>
+    <a class="btn" href="https://meeting-cost-clock.pomyjo.com">회의비 계산기</a>
   </div>
 
   <h2>더 비싼 건 회의 시간이 아닙니다</h2>
@@ -313,6 +313,33 @@ footer.site .fl a{margin:0 7px}
     <p>모든 회의가 낭비는 아닙니다. <strong>결정이 필요한 자리</strong>, <strong>맥락 공유가 필요한 자리</strong>, <strong>관계가 유지돼야 하는 자리</strong>는 비용을 내고 살 가치가 있습니다. 문제는 이 셋 중 어디에도 해당하지 않는데 관성으로 유지되는 회의입니다. 판단 기준은 “회의가 많다”가 아니라 <strong>“이 회의가 저 가격만큼의 값을 하는가”</strong>입니다.</p>
   </div>
 
+  <p>개인 쪽 “시간당 단가”는 <a href="/guides/true-hourly-rate">내 진짜 시급 계산하기</a>와 같은 논리입니다. 연봉을 시급으로 나눌 때 통근·초과까지 넣는 법은 그 가이드에서, 조직 회의 비용은 이 글·<a href="https://meeting-cost-clock.pomyjo.com">회의비 계산기</a>에서 보면 됩니다.</p>
+
+  <div class="tool-cta" data-tool="meeting-cost-clock">
+    <span class="ico">💸</span>
+    <span class="txt">
+      <strong>이 회의, 얼마인지 바로 보기</strong>
+      <span>인원·연봉·시간만 넣으면 1회·연간이 같이 나옵니다.</span>
+    </span>
+    <a class="btn" href="https://meeting-cost-clock.pomyjo.com">회의비 계산기</a>
+  </div>
+
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">자주 묻는 질문</h2>
+
+    <h3>시급은 왜 연봉÷2080인가요?</h3>
+    <p>주 40시간 × 52주를 기준으로 연간 실근로를 환산하는 업계 관행입니다. 실제 연차는 조직마다 다르니, 더 보수적으로 보려면 분모를 줄이면 시간당 비용이 올라갑니다.</p>
+
+    <h3>한 번 회의가 싼데 왜 연이 커지나요?</h3>
+    <p>1회는 작아 보여도 주간 정례 × 52주면 천만 단위로 커집니다. 본문 예시(약 25만 × 52 ≈ 1,300만)가 그 경우입니다. 훅 카피의 「연 천만」은 그 크기를 반올림한 표현입니다.</p>
+
+    <h3>준비·맥락 전환도 넣나요?</h3>
+    <p>기본식에는 앉아 있는 시간만 넣습니다. 준비·주의 잔류까지 넣으면 +30~50%까지 커질 수 있다는 참고만 두고, 확정 계수로 쓰지 않습니다. (집중 회복에 수십 분이 걸릴 수 있다는 실험 보고가 있으나, 본식에 박지 않습니다.)</p>
+
+    <h3>1.2배·1.25배는 뭔가요?</h3>
+    <p>급여 외 사업주 부담·복리를 러프하게 얹은 로딩입니다. 조직 기준이 있으면 그 숫자를 쓰고, 없으면 1.2~1.25를 최소 가정으로 둡니다.</p>
+  </section>
+
   <h2>정리</h2>
 
   <ul>
@@ -326,6 +353,7 @@ footer.site .fl a{margin:0 7px}
   <div class="sources">
     <h4>참고</h4>
     <ul>
+      <li>개정 2026-09-15: FAQ(÷2080·연간 누적·숨은 비용), 진짜 시급 상호링크, 계산기 CTA, 공유 훅(25만/연천만) 정렬.</li>
       <li>국민연금·건강보험·고용보험·산재보험 사업주 부담 요율 (요율은 매년 변동되므로 실제 계산 시 해당 연도 고시 확인 필요)</li>
       <li>근로자퇴직급여 보장법상 퇴직급여 충당 기준</li>
       <li>Leroy S — 과제 전환 시 주의 잔류(attention residue)에 관한 연구</li>

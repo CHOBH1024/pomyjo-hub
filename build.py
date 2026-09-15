@@ -73,7 +73,7 @@ def process(path: pathlib.Path) -> str:
 
 
 def main():
-    pages = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("guides/*.html"))
+    pages = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("guides/*.html")) + sorted(ROOT.glob("tools/*.html"))
     print(f"site.css {len(CSS):,} bytes 를 {len(pages)}개 페이지에 인라인합니다.\n")
     for p in pages:
         rel = p.relative_to(ROOT).as_posix()
